@@ -10,7 +10,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-		    sh 'docker build -f ~/code/frontend/ -t frontend:new .'
+		    sh 'docker build -f ~/code/frontend/Dockerfile -t frontend:new .'
             }
         }
 	stage('Push Docker Image to ECR') {
