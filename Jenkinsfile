@@ -1,12 +1,6 @@
 pipeline {
     agent any
     stages {
-	stage('Clone Git Repository') {
-		steps {
-			sh 'git clone https://github.com/kobina25/devops-code-challenge.git ~/code'
-			sh 'cd ~/code'
-		}
-	}
         stage('Build') {
             steps {
                 echo 'Building..'
