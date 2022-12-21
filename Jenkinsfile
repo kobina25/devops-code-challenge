@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-		    sh 'docker build -f ./frontend/ -t frontend:new .'
+		    sh 'sudo docker build -f ./frontend/ -t frontend:new .'
             }
         }
 	stage('Push Docker Image to ECR') {
